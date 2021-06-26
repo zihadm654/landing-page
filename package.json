@@ -1,0 +1,19 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run clean && parcel src/index.html --out-dir development -p 3000",
+    "build": "rimraf ./dist && parcel build src/*.html --out-dir build --public-url ./",
+    "clean": "rimraf ./development && rimraf ./.cache"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5",
+    "rimraf": "^3.0.2",
+    "sass": "^1.35.1"
+  }
+}

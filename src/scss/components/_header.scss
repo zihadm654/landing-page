@@ -1,0 +1,150 @@
+#hero {
+  font-family: $primaryFont;
+  @include breakpoint-down(medium) {
+    height: 39em;
+  }
+  @include breakpoint-down(small) {
+    height: 32em;
+  }
+  .navbar {
+    position: fixed;
+    min-height: 5em;
+    z-index: 9999999;
+    padding: 0 50px;
+    width: 100%;
+    @include flex(space-between);
+    @include breakpoint-down(medium) {
+      padding: 0 20px;
+    }
+    @include breakpoint-down(small) {
+      padding: 0px 15px;
+    }
+    &__logo {
+      z-index: 1000;
+      @include flex(center);
+      &--title {
+        img {
+          width: 42px;
+          height: 42px;
+          @include breakpoint-down(small) {
+            width: 32px;
+            height: 32px;
+          }
+        }
+        @include flex(center);
+        & p {
+          margin-left: 10px;
+          margin-top: 3px;
+          font-weight: 700;
+          font-size: 1rem;
+          letter-spacing: 1.5px;
+          @include breakpoint-down(small) {
+            font-size: 15px;
+            margin: 0px 0px 0px 8px;
+          }
+        }
+      }
+      &:hover {
+        opacity: 50%;
+        cursor: pointer;
+      }
+    }
+    #hamburger {
+      &.is-active {
+        &:hover {
+          .bars {
+            transform: rotate(90deg);
+            transition: transform 0.2s ease-in;
+          }
+        }
+        .menu {
+          color: #fff;
+        }
+        .bar:nth-child(2) {
+          opacity: 0;
+        }
+        .bar:nth-child(1) {
+          transform: translateY(9px) rotate(-45deg);
+          background-color: white;
+        }
+        .bar:nth-child(3) {
+          transform: translateY(-9px) rotate(45deg);
+          background-color: white;
+        }
+      }
+    }
+    .hamburger {
+      @include flex(space-between);
+      z-index: 999;
+      .menu {
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      .bars {
+        @include flex(space-between);
+        flex-direction: column;
+        margin-left: 5px;
+        &:hover {
+          cursor: pointer;
+          opacity: 90%;
+        }
+        .bar {
+          height: 4px;
+          background-color: rgb(0, 0, 0);
+          width: 28px;
+          margin: 2.4px 0px;
+        }
+      }
+    }
+    &__menu {
+      @include flex(space-between);
+      font-family: $primaryFont;
+      display: none;
+      @include flex(center);
+      flex-direction: column;
+      background-color: $primaryColor;
+      position: absolute;
+      width: 100%;
+      top: -1000px;
+      left: 0px;
+      &.active {
+        top: 0%;
+        opacity: 1;
+        z-index: 99;
+        height: 100vh;
+        overflow: hidden;
+        li {
+          padding-bottom: 15px;
+          a {
+            color: gray;
+            font-size: 2.2rem;
+            font-weight: bold;
+          }
+        }
+      }
+      .list__menu {
+        color: gray;
+        font-size: 16px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+      }
+      li {
+        position: relative;
+        list-style: none;
+        padding: 0 20px;
+        a {
+          text-decoration: none;
+          color: #000;
+          font-weight: bold;
+          font-size: 15px;
+          transition: all 0.4s ease-out;
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

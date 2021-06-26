@@ -1,0 +1,78 @@
+.hero {
+  // padding: 155px 50px 0px 50px;
+  position: relative;
+
+  @include breakpoint-down(small) {
+    padding: 0px 15px;
+  }
+  @include breakpoint-down(medium) {
+    padding: 140px 20px 20px 20px;
+  }
+  @include breakpoint-down(small) {
+    padding: 0px 15px;
+  }
+  &__container {
+    width: 75%;
+    @include breakpoint-down(medium) {
+      width: 85%;
+    }
+    @include breakpoint-down(small) {
+      padding: 200px 0 0 0px;
+      width: 95%;
+    }
+    h4 {
+      letter-spacing: 10px;
+      color: $primaryColor;
+      text-transform: uppercase;
+      font-family: $primaryFont;
+      font-size: 15px;
+      font-weight: 500;
+      @include breakpoint-down(medium) {
+        font-size: 16px;
+        letter-spacing: 8px;
+      }
+      @include breakpoint-down(small) {
+        font-weight: 500;
+        font-family: $primaryFont;
+        padding: 5px 12px 4px 0px;
+        font-size: 15px;
+      }
+    }
+    h2 {
+      padding-top: 15px;
+      line-height: 4.7rem;
+      font-size: 70px;
+      font-weight: 700;
+      font-family: $secondaryFont;
+      color: $primaryColor;
+      @include breakpoint-down(medium) {
+        line-height: 3.5rem;
+        font-size: 3.5rem;
+      }
+      @include breakpoint-down(small) {
+        font-size: 31px;
+        padding-top: 0px;
+        line-height: 2.4rem;
+        font-weight: 700;
+      }
+    }
+    h5 {
+      padding: 35px 0 3px 0;
+      font-size: 19px;
+      font-family: $primaryFont;
+      color: $secondMost;
+      font-weight: 500;
+      line-height: 1.6;
+      @include breakpoint-down(medium) {
+        padding-top: 40px;
+        font-size: 18px;
+        font-weight: 500;
+      }
+      @include breakpoint-down(small) {
+        padding-top: 20px;
+        font-size: 17px;
+        font-weight: 500;
+      }
+    }
+  }
+}

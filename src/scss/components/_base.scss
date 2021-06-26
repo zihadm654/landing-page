@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background-color: #fff;
+  font-family: $secondaryFont;
+}
+body.active {
+  overflow-y: auto;
+  overflow-x: hidden;
+  .navbar__logo--title {
+    p {
+      color: white;
+      z-index: 9;
+    }
+  }
+}
+#hero,
+#selectedProjects,
+#personalProjects,
+#newProjects,
+#contact {
+  @include breakpoint-up(large) {
+    max-width: 60em;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

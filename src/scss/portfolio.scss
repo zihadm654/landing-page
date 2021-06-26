@@ -1,0 +1,24 @@
+// for all functional
+@import "../scss/helpers/variables";
+@import "../scss/helpers/functional";
+@import "../scss/helpers/mixin";
+@import "../scss/helpers/animation";
+
+// responsiveness
+@import "../scss/layouts/responsive";
+
+// for all components
+@import "../scss/components/base";
+@import "../scss/components/header";
+@import "../scss/components/buttons";
+//for all section
+@import "../scss/sections/hero__content";
+@import "../scss/sections/selected__content";
+@import "../scss/sections/personal__content";
+@import "../scss/sections/contact__content";
+//for typography
+@import "../scss/typography/typography";
+//font family import
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&family=Noto+Sans:wght@700&display=swap');
+
