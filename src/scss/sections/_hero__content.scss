@@ -1,25 +1,19 @@
 .hero {
-  // padding: 155px 50px 0px 50px;
+  padding: 50px;
+  margin-top: 7rem;
   position: relative;
-
+  @include grid;
   @include breakpoint-down(small) {
-    padding: 0px 15px;
+    padding: 20px;
   }
   @include breakpoint-down(medium) {
-    padding: 140px 20px 20px 20px;
+    padding: 30px;
   }
-  @include breakpoint-down(small) {
-    padding: 0px 15px;
-  }
-  &__container {
-    width: 75%;
-    @include breakpoint-down(medium) {
-      width: 85%;
-    }
+  &__left {
     @include breakpoint-down(small) {
-      padding: 200px 0 0 0px;
-      width: 95%;
+      grid-column: 1/13;
     }
+    grid-column: 1/8;
     h4 {
       letter-spacing: 10px;
       color: $primaryColor;
@@ -72,6 +66,22 @@
         padding-top: 20px;
         font-size: 17px;
         font-weight: 500;
+      }
+    }
+  }
+  &__right {
+    @include breakpoint-down(small) {
+      grid-column: 1/13;
+    }
+    grid-column: 8/13;
+    align-self: center;
+    .image__container {
+      height: auto;
+      width: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
       }
     }
   }

@@ -2,7 +2,7 @@
   .personalProjects__heading {
     padding: 50px;
     @include breakpoint-down(small) {
-      padding: 20px 15px;
+      padding: 20px;
     }
     @include breakpoint-down(medium) {
       padding: 20px;
@@ -32,13 +32,13 @@
       }
     }
   }
-  .personalProjects__container {
+  .container {
     @include grid;
     padding: 50px;
     @include breakpoint-down(small) {
-      padding: 1.6rem;
+      padding: 20px;
     }
-    &--box1 {
+    .box1 {
       @include breakpoint-down(small) {
         grid-column: 1/13;
         height: 340px;
@@ -50,6 +50,7 @@
       background-size: cover;
       background-position: center left;
       background-repeat: no-repeat;
+      transition: all 0.3s ease-out;
       .box1__text {
         padding: 50px;
         width: 300px;
@@ -100,11 +101,12 @@
         }
       }
     }
-    &--box2 {
+    .box2 {
       @include breakpoint-down(small) {
         grid-column: 1/13;
         height: 340px;
       }
+      transition: all 0.3s ease-out;
       height: 500px;
       grid-column: 7/13;
       background: url(../assets/symova-01.jpg);
@@ -151,9 +153,10 @@
       }
       &:hover {
         cursor: pointer;
-        background: url(../assets/symova-01.jpg) rgba(1, 8, 31, 0.9);
+        background: url(../assets/symova-01.jpg);
         background-position: center left;
         background-size: cover;
+
         .hover__button {
           @include breakpoint-down(small) {
             display: none;
@@ -172,7 +175,7 @@
       padding: 50px 20px;
     }
     @include breakpoint-down(small) {
-      padding: 20px 15px;
+      padding: 20px;
     }
     & p:nth-child(1) {
       text-transform: uppercase;
@@ -201,13 +204,13 @@
       }
     }
   }
-  .newProjects__container {
+  .container {
     @include grid;
     padding: 0 50px;
-    @include breakpoint-down(medium) {
+    @include breakpoint-down(small) {
       padding: 20px;
     }
-    &--box1 {
+    .box1 {
       @include breakpoint-down(small) {
         grid-column: 1/13;
         height: 240px;
@@ -248,7 +251,7 @@
         }
       }
     }
-    &--box2 {
+    .box2 {
       @include breakpoint-down(small) {
         grid-column: 1/13;
         height: 340px;
@@ -288,7 +291,7 @@
         }
       }
     }
-    &--box3 {
+    .box3 {
       @include breakpoint-down(small) {
         grid-column: 1/13;
       }
@@ -332,7 +335,7 @@
     }
   }
   .collaborate {
-    padding: 120px 50px 80px 50px;
+    padding: 80px 50px;
     @include breakpoint-down(medium) {
       padding: 70px 20px;
     }

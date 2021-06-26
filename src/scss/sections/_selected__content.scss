@@ -2,10 +2,10 @@
   .selectedProjects__heading {
     padding: 70px 50px;
     @include breakpoint-down(medium) {
-      padding: 68px 20px;
+      padding: 68px 30px;
     }
     @include breakpoint-down(small) {
-      padding: 50px 15px;
+      padding: 40px 20px;
     }
     h3 {
       text-transform: uppercase;
@@ -32,10 +32,13 @@
       }
     }
   }
-  .container {
+  .selectedProjects__container {
     @include grid;
     grid-row: 2;
     padding: 50px;
+    @include breakpoint-down(small) {
+      padding: 20px;
+    }
     .box1 {
       @include breakpoint-down(small) {
         padding: 20px;
@@ -49,6 +52,7 @@
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
+      transition: all 0.3s ease-out;
       .box1__text {
         padding: 50px;
         @include breakpoint-down(small) {
@@ -101,6 +105,7 @@
         height: 340px;
       }
       height: 500px;
+      transition: all 0.3s ease-out;
       grid-column: 7/13;
       background-image: url(../assets/triniso-01.jpg);
       background-size: cover;
@@ -163,6 +168,7 @@
         grid-column: 1/13;
         height: 340px;
       }
+      transition: all 0.3s ease-out;
       grid-column: 1/7;
       height: 500px;
       background-image: url(../assets/symova-01.jpg);
@@ -214,6 +220,7 @@
         cursor: pointer;
         background: url(../assets/loader-symova.jpg);
         background-size: cover;
+        background-position: center left;
         .hover__button {
           visibility: visible;
           opacity: 1;
@@ -230,6 +237,7 @@
       background: url(../assets/pmr-01.jpg);
       background-position: center center;
       background-size: cover;
+      transition: all 0.3s ease-out;
       .box4__text {
         padding: 40px;
         @include breakpoint-down(small) {

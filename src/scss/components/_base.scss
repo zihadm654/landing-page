@@ -18,13 +18,13 @@ body.active {
     }
   }
 }
-#hero,
+.hero,
 #selectedProjects,
 #personalProjects,
 #newProjects,
 #contact {
   @include breakpoint-up(large) {
-    max-width: 60em;
+    max-width: 75em;
     width: 100%;
     margin: 0 auto;
   }

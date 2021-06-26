@@ -5,16 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>landing page</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <section id="hero">        
+    <section id="hero">   
         <nav class="navbar">
-            <div class="navbar__logo nav__ani">
+            <div class="navbar__logo">
                 <div class="navbar__logo--title">
-                    <img src="../src/assets/Group 4.svg" alt="svg">
-                    <p>Zihad Malik <br>web & ui designer</p> 
+                    <!-- <img src="../src/assets/Group 4.svg" alt="svg"> -->
+                    <p>Zihad Malik <br>developer & ui designer</p> 
                 </div>
             </div>
+            <ul class="navbar__menu">
+                <li class="list__menu">Menu</li>
+                <li><a class="navbar__menu--links" href="#selectedProjects">Projects</a></li>
+                <li><a class="navbar__menu--links" href="">About me</a></li>
+                <li><a class="navbar__menu--links" href="">Experience</a></li>
+                <li><a class="navbar__menu--links" href="">Contact</a></li>
+                <li><a class="navbar__menu--links" href="">Facebook</a></li>
+                <li><a class="navbar__menu--links" href="">Instagram</a></li>
+            </ul>
             <div id="hamburger" class="hamburger nav__ani">
                 <div class="menu">Menu</div>
                 <div class="bars">
@@ -23,21 +33,11 @@
                     <span class="bar"></span>
                 </div>
             </div>
-            <ul class="navbar__menu">
-                <li class="list__menu">Menu</li>
-                <li><a class="navbar__menu--links" href="#selectedProjects">Projects</a></li>
-                <li><a class="navbar__menu--links" href="about.html">About me</a></li>
-                <li><a class="navbar__menu--links" href="">Experience</a></li>
-                <li><a class="navbar__menu--links" href="">Contact</a></li>
-                <li><a class="navbar__menu--links" href="">Facebook</a></li>
-                <li><a class="navbar__menu--links" href="">Instagram</a></li>
-            </ul>
         </nav>
         <div class="hero">
-            <div class="hero__container">
+            <div class="hero__left">
             <h4 class="ani__hero">Zihad Malik</h4>
-            <h2 class="ani__hero">Website and user
-                Interface designer</h2>
+            <h2 class="ani__hero">Website and user Interface designer</h2>
             <h5 class="ani__hero">Over the past 5 years, as an web developer and designer, I’ve worked with many clients in marketing places and some companies. And I am helping new comers startups to successfully reach their full potential.</h5>
             <div class="hero__container--btn ani__hero">
                 <span>View Projects</span>
@@ -45,16 +45,21 @@
                 <span>Know Me More</span>
             </div>
         </div>
-    </div>
-        <div class="wrapper ani__hero">
-            <a class="button" href="">
-                <div class="icon">
-                    <img id="email_icon" src="../src/assets/mail_black_24dp.svg">
-                    <span class="contact-text">Contact me</span>
-                </div>
-            </a>
+        <div class="hero__right">
+            <div class="image__container">
+                <img src="./assets/photography.jpg" alt="">
+            </div>
+        </div>
         </div>
     </section>
+    <div class="wrapper">
+        <a class="button" href="">
+            <div class="icon">
+                <img id="email_icon" src="../src/assets/mail_black_24dp.svg">
+                <span class="contact-text">Contact me</span>
+            </div>
+        </a>
+    </div>
     <section id="selectedProjects">
         <div class="selectedProjects__heading">
             <h3 class="title">selected projects</h3>
@@ -144,16 +149,15 @@
             </div>
         </div>
         <div class="collaborate animate">
-            <div class="assets">
+            <div class="content">
                 <p>NEED A DESIGNER?</p>
-                <p>Let’s work together  <span class="material-icons" id="arrow__icon">
-                    east</span></p>
+                <p>Let’s work together</p>
             </div>
         </div>
     </section>
+    <hr width="100%"/>
     <section id="contact" class="contact__ani">
-        <hr width="100%"/>
-            <div class="contact_assets">
+            <div class="contact_content">
                 <div class="contact_info">
                 <p> Contact information —</p>
                     <p>Feel free to reach out to me any time. I prefer to talk over email, especially since we may be a few time zones away.</p>
@@ -189,8 +193,10 @@
                 </div>
             </div>
             <div class="copyright">
-                <img src="../src/assets/title_logo.png" id="copyright" alt="">
-                <p>@ 2018 - 2021 Zihad Malik <br> with love from Dhaka,Bangladesh.</p>
+                <div class="contain">
+                    <img src="../src/assets/title_logo.png" id="copyright" alt="">
+                    <p>@ 2018 - 2021 Zihad Malik <br> with love from Dhaka,Bangladesh.</p>
+                </div>
             </div>
             <script src="./js/index.js"></script>
 </body>

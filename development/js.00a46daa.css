@@ -65,12 +65,12 @@ body.active .navbar__logo--title p {
 }
 
 @media (min-width: 56.25em) {
-  #hero,
+  .hero,
 #selectedProjects,
 #personalProjects,
 #newProjects,
 #contact {
-    max-width: 60em;
+    max-width: 75em;
     width: 100%;
     margin: 0 auto;
   }
@@ -78,35 +78,27 @@ body.active .navbar__logo--title p {
 
 #hero {
   font-family: "Poppins", sans-serif;
-}
-@media (max-width: 56.24em) {
-  #hero {
-    height: 39em;
-  }
-}
-@media (max-width: 31.2599em) {
-  #hero {
-    height: 32em;
-  }
+  width: 100%;
 }
 #hero .navbar {
+  top: 0%;
   position: fixed;
-  min-height: 5em;
-  z-index: 9999999;
-  padding: 0 50px;
+  height: 5em;
   width: 100%;
+  z-index: 9999999;
+  padding: 0 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 @media (max-width: 56.24em) {
   #hero .navbar {
-    padding: 0 20px;
+    padding: 0 30px;
   }
 }
 @media (max-width: 31.2599em) {
   #hero .navbar {
-    padding: 0px 15px;
+    padding: 0 2rem;
   }
 }
 #hero .navbar__logo {
@@ -114,21 +106,6 @@ body.active .navbar__logo--title p {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-#hero .navbar__logo--title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#hero .navbar__logo--title img {
-  width: 42px;
-  height: 42px;
-}
-@media (max-width: 31.2599em) {
-  #hero .navbar__logo--title img {
-    width: 32px;
-    height: 32px;
-  }
 }
 #hero .navbar__logo--title p {
   margin-left: 10px;
@@ -207,7 +184,7 @@ body.active .navbar__logo--title p {
   background-color: #0f141e;
   position: absolute;
   width: 100%;
-  top: -1000px;
+  top: -180%;
   left: 0px;
 }
 #hero .navbar__menu.active {
@@ -463,38 +440,32 @@ body.active .navbar__logo--title p {
 }
 
 .hero {
+  padding: 50px;
+  margin-top: 7rem;
   position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.6rem;
 }
 @media (max-width: 31.2599em) {
   .hero {
-    padding: 0px 15px;
+    padding: 20px;
   }
 }
 @media (max-width: 56.24em) {
   .hero {
-    padding: 140px 20px 20px 20px;
+    padding: 30px;
   }
+}
+.hero__left {
+  grid-column: 1/8;
 }
 @media (max-width: 31.2599em) {
-  .hero {
-    padding: 0px 15px;
+  .hero__left {
+    grid-column: 1/13;
   }
 }
-.hero__container {
-  width: 75%;
-}
-@media (max-width: 56.24em) {
-  .hero__container {
-    width: 85%;
-  }
-}
-@media (max-width: 31.2599em) {
-  .hero__container {
-    padding: 200px 0 0 0px;
-    width: 95%;
-  }
-}
-.hero__container h4 {
+.hero__left h4 {
   letter-spacing: 10px;
   color: #0f141e;
   text-transform: uppercase;
@@ -503,20 +474,20 @@ body.active .navbar__logo--title p {
   font-weight: 500;
 }
 @media (max-width: 56.24em) {
-  .hero__container h4 {
+  .hero__left h4 {
     font-size: 16px;
     letter-spacing: 8px;
   }
 }
 @media (max-width: 31.2599em) {
-  .hero__container h4 {
+  .hero__left h4 {
     font-weight: 500;
     font-family: "Poppins", sans-serif;
     padding: 5px 12px 4px 0px;
     font-size: 15px;
   }
 }
-.hero__container h2 {
+.hero__left h2 {
   padding-top: 15px;
   line-height: 4.7rem;
   font-size: 70px;
@@ -525,20 +496,20 @@ body.active .navbar__logo--title p {
   color: #0f141e;
 }
 @media (max-width: 56.24em) {
-  .hero__container h2 {
+  .hero__left h2 {
     line-height: 3.5rem;
     font-size: 3.5rem;
   }
 }
 @media (max-width: 31.2599em) {
-  .hero__container h2 {
+  .hero__left h2 {
     font-size: 31px;
     padding-top: 0px;
     line-height: 2.4rem;
     font-weight: 700;
   }
 }
-.hero__container h5 {
+.hero__left h5 {
   padding: 35px 0 3px 0;
   font-size: 19px;
   font-family: "Poppins", sans-serif;
@@ -547,18 +518,36 @@ body.active .navbar__logo--title p {
   line-height: 1.6;
 }
 @media (max-width: 56.24em) {
-  .hero__container h5 {
+  .hero__left h5 {
     padding-top: 40px;
     font-size: 18px;
     font-weight: 500;
   }
 }
 @media (max-width: 31.2599em) {
-  .hero__container h5 {
+  .hero__left h5 {
     padding-top: 20px;
     font-size: 17px;
     font-weight: 500;
   }
+}
+.hero__right {
+  grid-column: 8/13;
+  align-self: center;
+}
+@media (max-width: 31.2599em) {
+  .hero__right {
+    grid-column: 1/13;
+  }
+}
+.hero__right .image__container {
+  height: auto;
+  width: 100%;
+}
+.hero__right .image__container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 #selectedProjects .selectedProjects__heading {
@@ -566,12 +555,12 @@ body.active .navbar__logo--title p {
 }
 @media (max-width: 56.24em) {
   #selectedProjects .selectedProjects__heading {
-    padding: 68px 20px;
+    padding: 68px 30px;
   }
 }
 @media (max-width: 31.2599em) {
   #selectedProjects .selectedProjects__heading {
-    padding: 50px 15px;
+    padding: 40px 20px;
   }
 }
 #selectedProjects .selectedProjects__heading h3 {
@@ -604,14 +593,19 @@ body.active .navbar__logo--title p {
     font-size: 40px;
   }
 }
-#selectedProjects .container {
+#selectedProjects .selectedProjects__container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 1.6rem;
   grid-row: 2;
   padding: 50px;
 }
-#selectedProjects .container .box1 {
+@media (max-width: 31.2599em) {
+  #selectedProjects .selectedProjects__container {
+    padding: 20px;
+  }
+}
+#selectedProjects .selectedProjects__container .box1 {
   height: 500px;
   grid-column: 1/7;
   position: relative;
@@ -619,43 +613,44 @@ body.active .navbar__logo--title p {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  transition: all 0.3s ease-out;
 }
 @media (max-width: 31.2599em) {
-  #selectedProjects .container .box1 {
+  #selectedProjects .selectedProjects__container .box1 {
     padding: 20px;
     grid-column: 1/13;
     height: 340px;
   }
 }
-#selectedProjects .container .box1 .box1__text {
+#selectedProjects .selectedProjects__container .box1 .box1__text {
   padding: 50px;
 }
 @media (max-width: 31.2599em) {
-  #selectedProjects .container .box1 .box1__text {
+  #selectedProjects .selectedProjects__container .box1 .box1__text {
     padding: 30px;
   }
 }
-#selectedProjects .container .box1 .box1__text p:nth-child(1) {
+#selectedProjects .selectedProjects__container .box1 .box1__text p:nth-child(1) {
   color: white;
   font-size: 16px;
   font-weight: 500;
 }
 @media (max-width: 31.2599em) {
-  #selectedProjects .container .box1 .box1__text p:nth-child(1) {
+  #selectedProjects .selectedProjects__container .box1 .box1__text p:nth-child(1) {
     font-size: 14px;
   }
 }
-#selectedProjects .container .box1 .box1__text p:nth-child(2) {
+#selectedProjects .selectedProjects__container .box1 .box1__text p:nth-child(2) {
   color: #fff;
   font-size: 35px;
   padding-top: 25px;
 }
 @media (max-width: 31.2599em) {
-  #selectedProjects .container .box1 .box1__text p:nth-child(2) {
+  #selectedProjects .selectedProjects__container .box1 .box1__text p:nth-child(2) {
     font-size: 30px;
   }
 }
-#selectedProjects .container .box1 .box1__text .hover__button {
+#selectedProjects .selectedProjects__container .box1 .box1__text .hover__button {
   color: #fff;
   visibility: hidden;
   margin-top: 15px;
@@ -667,21 +662,22 @@ body.active .navbar__logo--title p {
   justify-content: left;
   transition: opacity 500ms ease-out;
 }
-#selectedProjects .container .box1 .box1__text .hover__button #arrow__icon {
+#selectedProjects .selectedProjects__container .box1 .box1__text .hover__button #arrow__icon {
   text-align: center;
   margin-left: 10px;
 }
-#selectedProjects .container .box1:hover {
+#selectedProjects .selectedProjects__container .box1:hover {
   cursor: pointer;
   background: url(/loader-basicux.c74e4089.jpg);
   background-position: center center;
 }
-#selectedProjects .container .box1:hover .hover__button {
+#selectedProjects .selectedProjects__container .box1:hover .hover__button {
   visibility: visible;
   opacity: 1;
 }
-#selectedProjects .container .box2 {
+#selectedProjects .selectedProjects__container .box2 {
   height: 500px;
+  transition: all 0.3s ease-out;
   grid-column: 7/13;
   background-image: url(/triniso-01.0b9373ce.jpg);
   background-size: cover;
@@ -689,46 +685,46 @@ body.active .navbar__logo--title p {
   background-repeat: no-repeat;
 }
 @media (max-width: 31.2599em) {
-  #selectedProjects .container .box2 {
+  #selectedProjects .selectedProjects__container .box2 {
     grid-column: 1/13;
     height: 340px;
   }
 }
-#selectedProjects .container .box2 .box2__text {
+#selectedProjects .selectedProjects__container .box2 .box2__text {
   padding: 50px;
 }
 @media (max-width: 31.2599em) {
-  #selectedProjects .container .box2 .box2__text {
+  #selectedProjects .selectedProjects__container .box2 .box2__text {
     padding: 20px 30px;
   }
 }
 @media (max-width: 70.24em) {
-  #selectedProjects .container .box2 .box2__text {
+  #selectedProjects .selectedProjects__container .box2 .box2__text {
     padding: 20px 30px;
   }
 }
-#selectedProjects .container .box2 .box2__text p:nth-child(1) {
+#selectedProjects .selectedProjects__container .box2 .box2__text p:nth-child(1) {
   color: #cabebe;
   font-size: 16px;
   font-weight: 500;
   font-family: sans-serif;
 }
 @media (max-width: 31.2599em) {
-  #selectedProjects .container .box2 .box2__text p:nth-child(1) {
+  #selectedProjects .selectedProjects__container .box2 .box2__text p:nth-child(1) {
     font-size: 12px;
   }
 }
-#selectedProjects .container .box2 .box2__text p:nth-child(2) {
+#selectedProjects .selectedProjects__container .box2 .box2__text p:nth-child(2) {
   color: white;
   font-size: 35px;
   padding-top: 25px;
 }
 @media (max-width: 31.2599em) {
-  #selectedProjects .container .box2 .box2__text p:nth-child(2) {
+  #selectedProjects .selectedProjects__container .box2 .box2__text p:nth-child(2) {
     font-size: 30px;
   }
 }
-#selectedProjects .container .box2 .box2__text .hover__button {
+#selectedProjects .selectedProjects__container .box2 .box2__text .hover__button {
   color: #fff;
   visibility: hidden;
   opacity: 0;
@@ -740,21 +736,22 @@ body.active .navbar__logo--title p {
   justify-content: left;
   transition: opacity 500ms ease-in;
 }
-#selectedProjects .container .box2 .box2__text .hover__button #arrow__icon {
+#selectedProjects .selectedProjects__container .box2 .box2__text .hover__button #arrow__icon {
   text-align: center;
   margin-left: 10px;
 }
-#selectedProjects .container .box2:hover {
+#selectedProjects .selectedProjects__container .box2:hover {
   cursor: pointer;
   background: url(/loader-triniso.c152d023.jpg);
   background-position: center right;
   background-size: cover;
 }
-#selectedProjects .container .box2:hover .hover__button {
+#selectedProjects .selectedProjects__container .box2:hover .hover__button {
   visibility: visible;
   opacity: 1;
 }
-#selectedProjects .container .box3 {
+#selectedProjects .selectedProjects__container .box3 {
+  transition: all 0.3s ease-out;
   grid-column: 1/7;
   height: 500px;
   background-image: url(/symova-01.1e01dca7.jpg);
@@ -763,44 +760,44 @@ body.active .navbar__logo--title p {
   background-repeat: no-repeat;
 }
 @media (max-width: 31.2599em) {
-  #selectedProjects .container .box3 {
+  #selectedProjects .selectedProjects__container .box3 {
     grid-column: 1/13;
     height: 340px;
   }
 }
-#selectedProjects .container .box3 .box3__text {
+#selectedProjects .selectedProjects__container .box3 .box3__text {
   padding: 50px;
 }
 @media (max-width: 31.2599em) {
-  #selectedProjects .container .box3 .box3__text {
+  #selectedProjects .selectedProjects__container .box3 .box3__text {
     padding: 20px 30px;
   }
 }
-#selectedProjects .container .box3 .box3__text p:nth-child(1) {
+#selectedProjects .selectedProjects__container .box3 .box3__text p:nth-child(1) {
   color: #928a8a;
   font-size: 16px;
   font-weight: 500;
   font-family: sans-serif;
 }
 @media (max-width: 31.2599em) {
-  #selectedProjects .container .box3 .box3__text p:nth-child(1) {
+  #selectedProjects .selectedProjects__container .box3 .box3__text p:nth-child(1) {
     font-size: 12px;
   }
 }
-#selectedProjects .container .box3 .box3__text p:nth-child(2) {
+#selectedProjects .selectedProjects__container .box3 .box3__text p:nth-child(2) {
   color: white;
   font-size: 35px;
   width: 400px;
   padding-top: 25px;
 }
 @media (max-width: 31.2599em) {
-  #selectedProjects .container .box3 .box3__text p:nth-child(2) {
+  #selectedProjects .selectedProjects__container .box3 .box3__text p:nth-child(2) {
     font-size: 30px;
     width: 200px;
     color: white;
   }
 }
-#selectedProjects .container .box3 .hover__button {
+#selectedProjects .selectedProjects__container .box3 .hover__button {
   color: #fff;
   visibility: hidden;
   margin-top: 15px;
@@ -813,63 +810,65 @@ body.active .navbar__logo--title p {
   text-align: center;
   transition: opacity 500ms ease-in;
 }
-#selectedProjects .container .box3 .hover__button #arrow__icon {
+#selectedProjects .selectedProjects__container .box3 .hover__button #arrow__icon {
   text-align: center;
   margin-left: 10px;
 }
-#selectedProjects .container .box3:hover {
+#selectedProjects .selectedProjects__container .box3:hover {
   cursor: pointer;
   background: url(/loader-symova.bd3aa24c.jpg);
   background-size: cover;
+  background-position: center left;
 }
-#selectedProjects .container .box3:hover .hover__button {
+#selectedProjects .selectedProjects__container .box3:hover .hover__button {
   visibility: visible;
   opacity: 1;
 }
-#selectedProjects .container .box4 {
+#selectedProjects .selectedProjects__container .box4 {
   height: 500px;
   grid-column: 7/13;
   background: url(/pmr-01.9ba2de74.jpg);
   background-position: center center;
   background-size: cover;
+  transition: all 0.3s ease-out;
 }
 @media (max-width: 31.2599em) {
-  #selectedProjects .container .box4 {
+  #selectedProjects .selectedProjects__container .box4 {
     grid-column: 1/13;
     height: 340px;
   }
 }
-#selectedProjects .container .box4 .box4__text {
+#selectedProjects .selectedProjects__container .box4 .box4__text {
   padding: 40px;
 }
 @media (max-width: 31.2599em) {
-  #selectedProjects .container .box4 .box4__text {
+  #selectedProjects .selectedProjects__container .box4 .box4__text {
     padding: 20px 30px;
   }
 }
-#selectedProjects .container .box4 .box4__text p:nth-child(1) {
+#selectedProjects .selectedProjects__container .box4 .box4__text p:nth-child(1) {
   color: #c8c2c2;
   font-size: 16px;
   font-weight: 500;
   font-family: sans-serif;
 }
 @media (max-width: 31.2599em) {
-  #selectedProjects .container .box4 .box4__text p:nth-child(1) {
+  #selectedProjects .selectedProjects__container .box4 .box4__text p:nth-child(1) {
     font-size: 12px;
   }
 }
-#selectedProjects .container .box4 .box4__text p:nth-child(2) {
+#selectedProjects .selectedProjects__container .box4 .box4__text p:nth-child(2) {
   color: white;
   font-size: 35px;
   padding-top: 25px;
 }
 @media (max-width: 31.2599em) {
-  #selectedProjects .container .box4 .box4__text p:nth-child(2) {
+  #selectedProjects .selectedProjects__container .box4 .box4__text p:nth-child(2) {
     font-size: 30px;
     color: white;
   }
 }
-#selectedProjects .container .box4 .hover__button {
+#selectedProjects .selectedProjects__container .box4 .hover__button {
   color: #fff;
   visibility: hidden;
   margin-top: 15px;
@@ -881,17 +880,17 @@ body.active .navbar__logo--title p {
   justify-content: left;
   transition: opacity 500ms ease-in;
 }
-#selectedProjects .container .box4 .hover__button #arrow__icon {
+#selectedProjects .selectedProjects__container .box4 .hover__button #arrow__icon {
   text-align: center;
   margin-left: 10px;
 }
-#selectedProjects .container .box4:hover {
+#selectedProjects .selectedProjects__container .box4:hover {
   cursor: pointer;
   background: url(/loader-pmr.7b7fec56.jpg);
   background-size: cover;
   background-position: bottom center;
 }
-#selectedProjects .container .box4:hover .hover__button {
+#selectedProjects .selectedProjects__container .box4:hover .hover__button {
   visibility: visible;
   opacity: 1;
 }
@@ -901,7 +900,7 @@ body.active .navbar__logo--title p {
 }
 @media (max-width: 31.2599em) {
   #personalProjects .personalProjects__heading {
-    padding: 20px 15px;
+    padding: 20px;
   }
 }
 @media (max-width: 56.24em) {
@@ -939,18 +938,18 @@ body.active .navbar__logo--title p {
     font-size: 45px;
   }
 }
-#personalProjects .personalProjects__container {
+#personalProjects .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 1.6rem;
   padding: 50px;
 }
 @media (max-width: 31.2599em) {
-  #personalProjects .personalProjects__container {
-    padding: 1.6rem;
+  #personalProjects .container {
+    padding: 20px;
   }
 }
-#personalProjects .personalProjects__container--box1 {
+#personalProjects .container .box1 {
   height: 500px;
   grid-column: 1/7;
   position: relative;
@@ -958,36 +957,37 @@ body.active .navbar__logo--title p {
   background-size: cover;
   background-position: center left;
   background-repeat: no-repeat;
+  transition: all 0.3s ease-out;
 }
 @media (max-width: 31.2599em) {
-  #personalProjects .personalProjects__container--box1 {
+  #personalProjects .container .box1 {
     grid-column: 1/13;
     height: 340px;
   }
 }
-#personalProjects .personalProjects__container--box1 .box1__text {
+#personalProjects .container .box1 .box1__text {
   padding: 50px;
   width: 300px;
   height: 250px;
 }
 @media (max-width: 31.2599em) {
-  #personalProjects .personalProjects__container--box1 .box1__text {
+  #personalProjects .container .box1 .box1__text {
     padding: 30px 20px;
   }
 }
-#personalProjects .personalProjects__container--box1 .box1__text p:nth-child(1) {
+#personalProjects .container .box1 .box1__text p:nth-child(1) {
   color: #928a8a;
   font-size: 16px;
   font-weight: 500;
   font-family: sans-serif;
 }
-#personalProjects .personalProjects__container--box1 .box1__text p:nth-child(2) {
+#personalProjects .container .box1 .box1__text p:nth-child(2) {
   color: white;
   font-size: 35px;
   font-weight: bold;
   padding-top: 15px;
 }
-#personalProjects .personalProjects__container--box1 .box1__text .hover__button {
+#personalProjects .container .box1 .box1__text .hover__button {
   color: #fff;
   visibility: hidden;
   margin-top: 15px;
@@ -999,27 +999,28 @@ body.active .navbar__logo--title p {
   justify-content: left;
   transition: opacity 500ms ease-in;
 }
-#personalProjects .personalProjects__container--box1 .box1__text .hover__button #arrow__icon {
+#personalProjects .container .box1 .box1__text .hover__button #arrow__icon {
   text-align: center;
   margin-left: 10px;
 }
-#personalProjects .personalProjects__container--box1:hover {
+#personalProjects .container .box1:hover {
   cursor: pointer;
   background: url(/triniso-01.0b9373ce.jpg) center center rgba(1, 8, 31, 0.8);
   background-size: cover;
   background-blend-mode: multiply;
   background-position: center left;
 }
-#personalProjects .personalProjects__container--box1:hover .hover__button {
+#personalProjects .container .box1:hover .hover__button {
   visibility: visible;
   opacity: 1;
 }
 @media (max-width: 31.2599em) {
-  #personalProjects .personalProjects__container--box1:hover .hover__button {
+  #personalProjects .container .box1:hover .hover__button {
     display: none;
   }
 }
-#personalProjects .personalProjects__container--box2 {
+#personalProjects .container .box2 {
+  transition: all 0.3s ease-out;
   height: 500px;
   grid-column: 7/13;
   background: url(/symova-01.1e01dca7.jpg);
@@ -1027,43 +1028,43 @@ body.active .navbar__logo--title p {
   background-position: center left;
 }
 @media (max-width: 31.2599em) {
-  #personalProjects .personalProjects__container--box2 {
+  #personalProjects .container .box2 {
     grid-column: 1/13;
     height: 340px;
   }
 }
-#personalProjects .personalProjects__container--box2 .box2__text {
+#personalProjects .container .box2 .box2__text {
   padding: 50px;
 }
 @media (max-width: 31.2599em) {
-  #personalProjects .personalProjects__container--box2 .box2__text {
+  #personalProjects .container .box2 .box2__text {
     padding: 30px 20px;
   }
 }
-#personalProjects .personalProjects__container--box2 .box2__text p:nth-child(1) {
+#personalProjects .container .box2 .box2__text p:nth-child(1) {
   color: white;
   font-size: 16px;
   font-weight: 500;
   font-family: sans-serif;
 }
 @media (max-width: 31.2599em) {
-  #personalProjects .personalProjects__container--box2 .box2__text p:nth-child(1) {
+  #personalProjects .container .box2 .box2__text p:nth-child(1) {
     font-size: 12px;
   }
 }
-#personalProjects .personalProjects__container--box2 .box2__text p:nth-child(2) {
+#personalProjects .container .box2 .box2__text p:nth-child(2) {
   color: white;
   font-size: 35px;
   font-weight: bold;
   padding-top: 25px;
 }
 @media (max-width: 31.2599em) {
-  #personalProjects .personalProjects__container--box2 .box2__text p:nth-child(2) {
+  #personalProjects .container .box2 .box2__text p:nth-child(2) {
     font-size: 30px;
     color: white;
   }
 }
-#personalProjects .personalProjects__container--box2 .box2__text .hover__button {
+#personalProjects .container .box2 .box2__text .hover__button {
   color: #fff;
   visibility: hidden;
   margin-top: 15px;
@@ -1075,22 +1076,22 @@ body.active .navbar__logo--title p {
   justify-content: left;
   transition: opacity 500ms ease-in;
 }
-#personalProjects .personalProjects__container--box2 .box2__text .hover__button #arrow__icon {
+#personalProjects .container .box2 .box2__text .hover__button #arrow__icon {
   text-align: center;
   margin-left: 10px;
 }
-#personalProjects .personalProjects__container--box2:hover {
+#personalProjects .container .box2:hover {
   cursor: pointer;
-  background: url(/symova-01.1e01dca7.jpg) rgba(1, 8, 31, 0.9);
+  background: url(/symova-01.1e01dca7.jpg);
   background-position: center left;
   background-size: cover;
 }
-#personalProjects .personalProjects__container--box2:hover .hover__button {
+#personalProjects .container .box2:hover .hover__button {
   visibility: visible;
   opacity: 1;
 }
 @media (max-width: 31.2599em) {
-  #personalProjects .personalProjects__container--box2:hover .hover__button {
+  #personalProjects .container .box2:hover .hover__button {
     display: none;
   }
 }
@@ -1105,7 +1106,7 @@ body.active .navbar__logo--title p {
 }
 @media (max-width: 31.2599em) {
   #newProjects .newProjects__heading {
-    padding: 20px 15px;
+    padding: 20px;
   }
 }
 #newProjects .newProjects__heading p:nth-child(1) {
@@ -1140,18 +1141,18 @@ body.active .navbar__logo--title p {
     margin: 5px 0;
   }
 }
-#newProjects .newProjects__container {
+#newProjects .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 1.6rem;
   padding: 0 50px;
 }
-@media (max-width: 56.24em) {
-  #newProjects .newProjects__container {
+@media (max-width: 31.2599em) {
+  #newProjects .container {
     padding: 20px;
   }
 }
-#newProjects .newProjects__container--box1 {
+#newProjects .container .box1 {
   grid-column: 1/5;
   background: url(/triniso-01.0b9373ce.jpg);
   background-size: cover;
@@ -1161,48 +1162,48 @@ body.active .navbar__logo--title p {
   justify-content: center;
 }
 @media (max-width: 31.2599em) {
-  #newProjects .newProjects__container--box1 {
+  #newProjects .container .box1 {
     grid-column: 1/13;
     height: 240px;
   }
 }
-#newProjects .newProjects__container--box1 .box1__text {
+#newProjects .container .box1 .box1__text {
   padding: 0px 100px;
   color: #fff;
   font-size: 18px;
   text-align: center;
   visibility: hidden;
 }
-#newProjects .newProjects__container--box1 .box1__text img {
+#newProjects .container .box1 .box1__text img {
   font-size: 30px;
   margin-bottom: 26px;
 }
 @media (max-width: 70.24em) {
-  #newProjects .newProjects__container--box1 .box1__text {
+  #newProjects .container .box1 .box1__text {
     display: none;
   }
 }
 @media (max-width: 31.2599em) {
-  #newProjects .newProjects__container--box1 .box1__text {
+  #newProjects .container .box1 .box1__text {
     display: none;
   }
 }
 @media (max-width: 31.2599em) {
-  #newProjects .newProjects__container--box1 .box1__text {
+  #newProjects .container .box1 .box1__text {
     display: none;
   }
 }
-#newProjects .newProjects__container--box1:hover {
+#newProjects .container .box1:hover {
   cursor: pointer;
   background: url(/triniso-01.0b9373ce.jpg) rgba(0, 10, 29, 0.911);
   background-position: center right;
   background-size: cover;
   background-blend-mode: multiply;
 }
-#newProjects .newProjects__container--box1:hover .box1__text {
+#newProjects .container .box1:hover .box1__text {
   visibility: visible;
 }
-#newProjects .newProjects__container--box2 {
+#newProjects .container .box2 {
   grid-column: 5/9;
   background: url(/pmr-01.9ba2de74.jpg);
   background-size: cover;
@@ -1212,44 +1213,44 @@ body.active .navbar__logo--title p {
   justify-content: center;
 }
 @media (max-width: 31.2599em) {
-  #newProjects .newProjects__container--box2 {
+  #newProjects .container .box2 {
     grid-column: 1/13;
     height: 340px;
   }
 }
-#newProjects .newProjects__container--box2 .box2__text {
+#newProjects .container .box2 .box2__text {
   padding: 0px 100px;
   color: #fff;
   font-size: 18px;
   text-align: center;
   visibility: hidden;
 }
-#newProjects .newProjects__container--box2 .box2__text img {
+#newProjects .container .box2 .box2__text img {
   font-size: 30px;
   margin-bottom: 26px;
 }
 @media (max-width: 70.24em) {
-  #newProjects .newProjects__container--box2 .box2__text {
+  #newProjects .container .box2 .box2__text {
     display: none;
   }
 }
 @media (max-width: 31.2599em) {
-  #newProjects .newProjects__container--box2 .box2__text {
+  #newProjects .container .box2 .box2__text {
     display: none;
   }
 }
-#newProjects .newProjects__container--box2:hover {
+#newProjects .container .box2:hover {
   cursor: pointer;
   background: url(/pmr-01.9ba2de74.jpg) rgba(15, 20, 30, 0.95);
   background-blend-mode: multiply;
   background-position: center left;
   background-size: cover;
 }
-#newProjects .newProjects__container--box2:hover .box2__text {
+#newProjects .container .box2:hover .box2__text {
   visibility: visible;
   transition: visibility 1000ms ease;
 }
-#newProjects .newProjects__container--box3 {
+#newProjects .container .box3 {
   height: 340px;
   grid-column: 9/13;
   background: url(/symova-01.1e01dca7.jpg) center left;
@@ -1260,47 +1261,47 @@ body.active .navbar__logo--title p {
   transition: background 0.3s ease-in-out;
 }
 @media (max-width: 31.2599em) {
-  #newProjects .newProjects__container--box3 {
+  #newProjects .container .box3 {
     grid-column: 1/13;
   }
 }
-#newProjects .newProjects__container--box3 .box3__text {
+#newProjects .container .box3 .box3__text {
   padding: 0px 100px;
   color: #fff;
   font-size: 18px;
   text-align: center;
   visibility: hidden;
 }
-#newProjects .newProjects__container--box3 .box3__text img {
+#newProjects .container .box3 .box3__text img {
   font-size: 30px;
   margin-bottom: 26px;
 }
 @media (max-width: 70.24em) {
-  #newProjects .newProjects__container--box3 .box3__text {
+  #newProjects .container .box3 .box3__text {
     display: none;
   }
 }
 @media (max-width: 31.2599em) {
-  #newProjects .newProjects__container--box3 .box3__text {
+  #newProjects .container .box3 .box3__text {
     display: none;
   }
 }
 @media (max-width: 31.2599em) {
-  #newProjects .newProjects__container--box3 .box3__text {
+  #newProjects .container .box3 .box3__text {
     display: none;
   }
 }
-#newProjects .newProjects__container--box3:hover {
+#newProjects .container .box3:hover {
   cursor: pointer;
   background: url(/symova-01.1e01dca7.jpg) center left rgba(15, 20, 30, 0.95);
   background-blend-mode: multiply;
   background-size: cover;
 }
-#newProjects .newProjects__container--box3:hover .box3__text {
+#newProjects .container .box3:hover .box3__text {
   visibility: visible;
 }
 #newProjects .collaborate {
-  padding: 120px 50px 80px 50px;
+  padding: 80px 50px;
 }
 @media (max-width: 56.24em) {
   #newProjects .collaborate {
@@ -1382,24 +1383,11 @@ body.active .navbar__logo--title p {
 
 #contact {
   position: relative;
-}
-#contact .contact_border {
-  margin: 70px 50px;
-  border-top: 1px solid #d4c6c6;
-}
-@media (max-width: 31.2599em) {
-  #contact .contact_border {
-    margin: 60px 15px;
-  }
-}
-@media (max-width: 70.24em) {
-  #contact .contact_border {
-    margin: 60px 30px;
-  }
+  padding: 50px 0;
 }
 #contact .contact_content {
   position: relative;
-  padding: 0 50px;
+  padding: 50px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 1.6rem;
@@ -1548,42 +1536,33 @@ body.active .navbar__logo--title p {
   color: #4c58d9;
 }
 #contact .copyright {
-  position: absolute;
-  bottom: 30px;
-  left: 50px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.6rem;
+  opacity: 60%;
+}
+#contact .copyright .contain {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 60%;
+  grid-column: 1/13;
 }
-@media (max-width: 56.24em) {
-  #contact .copyright {
-    left: 20px;
-    bottom: 30px;
-  }
-}
-@media (max-width: 31.2599em) {
-  #contact .copyright {
-    bottom: 30px;
-    left: 70px;
-  }
-}
-#contact .copyright > img {
+#contact .copyright .contain img {
   height: 45px;
   width: 45px;
 }
 @media (max-width: 70.24em) {
-  #contact .copyright > img {
+  #contact .copyright .contain img {
     height: 35px;
     width: 35px;
   }
 }
-#contact .copyright p {
+#contact .copyright .contain p {
   margin: 7px 0 0 10px;
   font-size: 17px;
 }
 @media (max-width: 70.24em) {
-  #contact .copyright p {
+  #contact .copyright .contain p {
     font-size: 15px;
   }
 }
