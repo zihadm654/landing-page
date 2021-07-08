@@ -1,7 +1,7 @@
 .hero__container--btn{
     padding-top: 25px;
     @include flex(justify-content);
-    & span:nth-child(1){
+    a{
         color: rgba(51, 45, 45, 0.788);
         font-family: $primaryFont;
         font-size: 1.1rem;
@@ -10,8 +10,8 @@
         padding: 0;
         transition: color 0.4s ease-out;
         text-transform: uppercase;
+        color: $secondaryColor;
         @include breakpoint-down(large){
-            color: $secondaryColor;
             font-size: 15px;
         }
         @include breakpoint-down(small){
@@ -19,10 +19,10 @@
             color: $secondaryColor;
         }
         &:hover{
+            color: $secondaryColor;
             position: relative;
             cursor: pointer;
             @include link__hover;
-
             &::after{
                 content: '';
                 position: absolute;
@@ -32,7 +32,6 @@
                 height: 1.5px;
                 width: 100%;
                 background-color: $secondaryColor;
-
                 &:hover{
                     @include link__hover;
 

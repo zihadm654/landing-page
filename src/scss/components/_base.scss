@@ -18,7 +18,12 @@ body.active {
     }
   }
 }
+a{
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
 
+}
 .hero,
 #selectedProjects,
 #personalProjects,

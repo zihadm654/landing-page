@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run clean && parcel src/index.html --out-dir development -p 3000",
+    "dev": "npm run clean && parcel src/index.html --out-dir dev -p 3000",
     "build": "rimraf ./dist && parcel build src/*.html --out-dir build --public-url ./",
-    "clean": "rimraf ./development && rimraf ./.cache"
+    "clean": "rimraf ./dev && rimraf ./.cache"
   },
   "keywords": [],
   "author": "",
