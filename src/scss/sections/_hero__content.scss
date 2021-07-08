@@ -1,76 +1,41 @@
 .hero {
-  padding: 50px;
-  margin-top: 7rem;
+  @include media(md){
+    padding: 2.5rem;
+  }
+  @include media(lg){
+    padding: 3rem;
+  }
+  @include media(xlg){
+    padding: 3.5rem;
+  }
+  @include media(sm){
+    padding: 2rem;
+  }
+  padding: 5rem 0;
+  margin-top: 10rem;
   position: relative;
   @include grid;
-  @include breakpoint-down(small) {
-    padding: 20px;
-  }
-  @include breakpoint-down(medium) {
-    padding: 30px;
-  }
   &__left {
-    @include breakpoint-down(small) {
+    @include media(sm) {
       grid-column: 1/13;
     }
     grid-column: 1/8;
-    h4 {
-      letter-spacing: 10px;
+    h5 {
       color: $primaryColor;
       text-transform: uppercase;
       font-family: $primaryFont;
-      font-size: 15px;
-      font-weight: 500;
-      @include breakpoint-down(medium) {
-        font-size: 16px;
-        letter-spacing: 8px;
-      }
-      @include breakpoint-down(small) {
-        font-weight: 500;
-        font-family: $primaryFont;
-        padding: 5px 12px 4px 0px;
-        font-size: 15px;
-      }
+      letter-spacing: 4px;
+      font-size: $p;
+      font-weight: bold;
     }
-    h2 {
-      padding-top: 15px;
-      line-height: 4.7rem;
-      font-size: 70px;
-      font-weight: 700;
-      font-family: $secondaryFont;
-      color: $primaryColor;
-      @include breakpoint-down(medium) {
-        line-height: 3.5rem;
-        font-size: 3.5rem;
-      }
-      @include breakpoint-down(small) {
-        font-size: 31px;
-        padding-top: 0px;
-        line-height: 2.4rem;
-        font-weight: 700;
-      }
-    }
-    h5 {
-      padding: 35px 0 3px 0;
-      font-size: 19px;
+    p {
+      padding: 1rem 0;
       font-family: $primaryFont;
       color: $secondMost;
-      font-weight: 500;
-      line-height: 1.6;
-      @include breakpoint-down(medium) {
-        padding-top: 40px;
-        font-size: 18px;
-        font-weight: 500;
-      }
-      @include breakpoint-down(small) {
-        padding-top: 20px;
-        font-size: 17px;
-        font-weight: 500;
-      }
     }
   }
   &__right {
-    @include breakpoint-down(small) {
+    @include media(sm) {
       grid-column: 1/13;
     }
     grid-column: 8/13;

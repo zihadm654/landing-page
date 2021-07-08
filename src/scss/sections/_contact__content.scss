@@ -2,71 +2,52 @@
 
 #contact {
   position: relative;
-  padding: 50px 0;
+  padding: 5rem;
+  @include media(sm){
+    padding: 2rem;
+  }
+  @include media(md){
+    padding: 2.5rem;
+  }
   .contact_content {
     position: relative;
-    padding: 50px;
+    padding: 5rem 0;
     @include grid;
-    @include breakpoint-down(small) {
-      padding: 0 20px;
-    }
-    @include breakpoint-down(large) {
-      padding: 0 20px;
-    }
     > a {
       color: black;
     }
     .contact_info {
       grid-column: 1/6;
-      @include breakpoint-down(small) {
+      @include media(sm) {
         grid-column: 1/13;
       }
       p:nth-child(1) {
         i {
           font-size: 100px;
         }
-        font-size: 1.5rem;
         font-family: $primaryFont;
-        width: 200px;
         font-weight: 700;
-        @include breakpoint-down(large) {
-          font-size: 18px;
-        }
       }
       p:nth-child(2) {
         margin-top: 0.62rem;
         font-family: sans-serif;
-        font-weight: 500;
-        // width: 300px;
-        font-size: 1rem;
         color: $pickupColor;
-        @include breakpoint-down(large) {
-          font-size: 15px;
-          // line-height: 10px;
-          width: 100%;
-        }
       }
       p:nth-child(3) {
         margin-top: 1.2rem;
-        // width: 5.5rem;
         font-family: $secondaryFont;
-        font-weight: 500;
-        line-height: 21px;
-        font-size: 1rem;
         color: rgb(87, 84, 84);
-
         > a {
           @include a_link;
         }
       }
     }
     .latest_work {
-      @include breakpoint-down(small) {
+      @include media(sm) {
         grid-column: 1/13;
       }
       grid-column: 6/8;
       p:nth-child(1) {
-        font-size: 1.5rem;
         font-weight: 700;
         font-family: $primaryFont;
       }
@@ -85,31 +66,24 @@
     }
     .availability {
       grid-column: 8/11;
-      @include breakpoint-down(small) {
+      @include media(sm) {
         grid-column: 1/13;
       }
       p:nth-child(1) {
-        font-size: 1.5rem;
-        line-height: 30px;
         font-weight: 700;
         font-family: $primaryFont;
       }
       p:nth-child(2) {
-        margin-top: 1rem;
-        font-family: sans-serif;
-        font-weight: 500;
-        font-size: 1rem;
+        margin-top: .5rem;
         color: $pickupColor;
       }
     }
     .to_follow {
-      @include breakpoint-down(small) {
+      @include media(sm) {
         grid-column: 1/13;
       }
       grid-column: 11/13;
       p:nth-child(1) {
-        font-size: 1.5rem;
-        line-height: 30px;
         font-weight: 700;
         font-family: $primaryFont;
         width: 130px;
@@ -120,8 +94,6 @@
         font-family: sans-serif;
         font-weight: 500;
         line-height: 25px;
-        font-size: 1rem;
-
         > a {
           @include a_link;
           color: $secondaryColor;
@@ -141,7 +113,7 @@
       img {
         height: 45px;
         width: 45px;
-        @include breakpoint-down(large) {
+        @include media(lg) {
           height: 35px;
           width: 35px;
         }
@@ -149,7 +121,7 @@
       p {
         margin: 7px 0 0 10px;
         font-size: 17px;
-        @include breakpoint-down(large) {
+        @include media(lg) {
           font-size: 15px;
         }
       }

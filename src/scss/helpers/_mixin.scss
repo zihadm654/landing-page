@@ -1,26 +1,24 @@
-// 640px, 1024px, 1400px
-$breakpoints-up: (
-  'medium': '31.26em',
-  'large': '56.25em',
-  'xlarge': '70.50em',
-);
-
-// 639px, 1023px, 1399px
-$breakpoints-down: (
-  'small': '31.2599em',
-  'medium': '56.24em',
-  'large': '70.24em',
-);
-
-@mixin breakpoint-up($size) {
-  @media (min-width: map-get($breakpoints-up, $size)) {
-    @content;
-  }
-}
-
-@mixin breakpoint-down($size) {
-  @media (max-width: map-get($breakpoints-down, $size)) {
-    @content;
+@mixin media($size) {
+  @if $size == sm {
+    @media (min-width: 320px) and (max-width: 478px) {
+      @content;
+    }
+  } @else if $size == md {
+    @media (min-width: 479px) and (max-width: 768px) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media (min-width: 769px) and (max-width: 1024px) {
+      @content;
+    }
+  } @else if $size == xlg {
+    @media (min-width: 1025px) and (max-width: 1250px) {
+      @content;
+    }
+  } @else if $size == xxlg {
+    @media (min-width: 1225px) and (max-width: 2000px) {
+      @content;
+    }
   }
 }
 @mixin link__hover {
@@ -42,5 +40,5 @@ $breakpoints-down: (
 @mixin grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 1.6rem;
+  gap: 2rem;
 }
