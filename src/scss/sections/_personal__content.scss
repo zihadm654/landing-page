@@ -1,13 +1,12 @@
 #personalProjects {
-  padding: 4.5rem;
-  @include media(sm){
+  @include media(sm) {
     padding: 2rem;
   }
-  @include media(md){
+  @include media(md) {
     padding: 2.5rem;
   }
   .personalProjects__heading {
-    padding: 5rem 0;
+    padding: 4rem 0;
     & p:nth-child(1) {
       text-transform: uppercase;
       font-family: $primaryFont;
@@ -22,35 +21,32 @@
   }
   .container {
     @include grid;
-    padding: 5rem 0;
+    padding: 2rem 0;
     .box1 {
       position: relative;
       background-image: url(../assets/triniso-01.jpg);
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
-      transition: all 0.3s ease-out;
-        .hover__button {
-          color: #fff;
-          visibility: hidden;
-          margin-top: 15px;
-          font-size: 17px;
-          font-weight: 500;
-          opacity: 0;
-          @include flex(left);
-          transition: opacity 500ms ease-in;
-          #arrow__icon {
-            text-align: center;
-            margin-left: 10px;
-          }
+      transition: all 0.1s ease;
+      .hover__button {
+        color: #fff;
+        visibility: hidden;
+        margin-top: 15px;
+        font-size: 17px;
+        font-weight: 500;
+        opacity: 0;
+        @include flex(left);
+        transition: opacity 500ms ease-in;
+        #arrow__icon {
+          text-align: center;
+          margin-left: 10px;
         }
       }
       &:hover {
         cursor: pointer;
-        background: url(../assets/triniso-01.jpg) center center
-          rgba(1, 8, 31, 0.8);
+        background: url(../assets/triniso-01.jpg) center center;
         background-size: cover;
-        background-blend-mode: multiply;
         .hover__button {
           visibility: visible;
           opacity: 1;
@@ -60,75 +56,78 @@
         }
       }
     }
-    .box2 {
-      transition: all 0.3s ease-out;
+  }
+  .box2 {
+    transition: all 0.1s ease;
+    background: url(../assets/symova-01.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    .box2__text {
+      .hover__button {
+        color: #fff;
+        visibility: hidden;
+        margin-top: 15px;
+        font-size: 17px;
+        font-weight: 500;
+        opacity: 0;
+        @include flex(left);
+        transition: opacity 500ms ease-in;
+        #arrow__icon {
+          text-align: center;
+          margin-left: 10px;
+        }
+      }
+    }
+    &:hover {
+      cursor: pointer;
       background: url(../assets/symova-01.jpg);
+      background-position: center center;
       background-size: cover;
-      background-position: center left;
-      .box2__text {
-        .hover__button {
-          color: #fff;
-          visibility: hidden;
-          margin-top: 15px;
-          font-size: 17px;
-          font-weight: 500;
-          opacity: 0;
-          @include flex(left);
-          transition: opacity 500ms ease-in;
-          #arrow__icon {
-            text-align: center;
-            margin-left: 10px;
-          }
+      background-repeat: no-repeat;
+      .hover__button {
+        @include media(sm) {
+          display: none;
         }
-      }
-      &:hover {
-        cursor: pointer;
-        background: url(../assets/symova-01.jpg);
-        background-position: center left;
-        background-size: cover;
-
-        .hover__button {
-          @include media(sm) {
-            display: none;
-          }
-          visibility: visible;
-          opacity: 1;
-        }
+        visibility: visible;
+        opacity: 1;
       }
     }
   }
-  .box1,.box2{
-    height: 60rem;
-    grid-column: span 6;
-    @include media(sm){
-      height:40rem;
-      grid-column: 1/13;
-    }
+}
+.box1,
+.box2 {
+  height: 60rem;
+  grid-column: span 6;
+  @include media(sm) {
+    height: 40rem;
+    grid-column: 1/13;
   }
-  .box1__text,.box2__text {
-        padding: 4rem;
-        @include media(sm){
-          padding: 2rem;
-        }
-        & p:nth-child(1) {
-          color: rgb(146, 138, 138);
-        }
-        & p:nth-child(2) {
-          color: rgb(255, 255, 255);
-          font-size: 35px;
-          font-weight: bold;
-          padding-top: 15px;
-        }
+}
+.box1__text,
+.box2__text {
+  padding: 4rem;
+  @include media(sm) {
+    padding: 2rem;
+  }
+  & p:nth-child(1) {
+    color: rgb(146, 138, 138);
+  }
+  & p:nth-child(2) {
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    font-weight: bold;
+    padding-top: 15px;
+  }
 }
 #newProjects {
-    padding: 5rem ;
-    padding: 4.5rem;
-    @include media(sm){
-      padding: 2rem;
-    }
-    @include media(md){
-      padding: 2.5rem;
-    }
+  @include media(sm) {
+    padding: 2rem;
+  }
+  @include media(md) {
+    padding: 2.5rem;
+  }
+  padding: 4rem 0;
   .newProjects__heading {
     & p:nth-child(1) {
       text-transform: uppercase;
@@ -144,16 +143,18 @@
   }
   .container {
     @include grid;
-    .box1,.box2,.box3{
+    padding: 4rem 0;
+    .box1,
+    .box2,
+    .box3 {
       height: 35rem;
-      @include media(sm){
+      @include media(sm) {
         height: 25rem;
       }
-
     }
     .box1 {
-      @include media(sm){
-      grid-column: span 6;
+      @include media(sm) {
+        grid-column: span 6;
       }
       grid-column: span 4;
       background: url(../assets/triniso-01.jpg);
@@ -161,16 +162,17 @@
       background-position: center center;
       @include flex(center);
       .box1__text {
+        p {
+          font-size: $sm;
+          font-weight: 400;
+        }
         img {
-          font-size: 30px;
           margin-bottom: 26px;
         }
-        padding: 0px 100px;
+        padding: 0px 4rem;
         color: #fff;
-        font-size: 18px;
         text-align: center;
         visibility: hidden;
-          display: none;
         @include media(md) {
           display: block;
         }
@@ -187,8 +189,12 @@
       }
     }
     .box2 {
-      @include media(sm){
-      grid-column: span 6;
+      @include media(sm) {
+        grid-column: span 6;
+      }
+      p {
+        font-size: $sm;
+        font-weight: 400;
       }
       grid-column: span 4;
       background: url(../assets/pmr-01.jpg);
@@ -196,9 +202,8 @@
       background-position: center center;
       @include flex(center);
       .box2__text {
-        padding: 0px 10rem;
+        padding: 0px 3rem;
         img {
-          font-size: 30px;
           margin-bottom: 26px;
         }
         color: #fff;
@@ -224,7 +229,7 @@
       }
     }
     .box3 {
-      @include media(sm){
+      @include media(sm) {
         grid-column: span 6;
       }
       grid-column: span 4;
@@ -233,21 +238,17 @@
       @include flex(center);
       transition: background 0.3s ease-in-out;
       .box3__text {
-        padding: 0px 100px;
+        padding: 0px 3rem;
         img {
-          font-size: 30px;
           margin-bottom: 26px;
         }
         color: #fff;
         text-align: center;
         visibility: hidden;
-        @include media(lg) {
-          display: none;
-        }
         @include media(sm) {
           display: none;
         }
-        @include media(sm) {
+        @include media(md) {
           display: none;
         }
       }
@@ -265,7 +266,7 @@
   }
   .collaborate {
     padding: 8rem 5rem;
-    @include media(sm){
+    @include media(sm) {
       padding: 4rem 2rem;
     }
     .content {

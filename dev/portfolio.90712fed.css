@@ -47,7 +47,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -76,7 +76,6 @@ body {
 
 body {
   background-color: #fff;
-  font-family: "Noto Sans JP", sans-serif;
 }
 
 body.active {
@@ -178,19 +177,14 @@ a {
   margin-left: 1rem;
 }
 #hero .navbar__logo--title p {
-  font-weight: 700;
-  font-size: 1.6rem;
-  letter-spacing: 1.5px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 #hero .navbar__logo:hover {
   opacity: 50%;
   cursor: pointer;
 }
-#hero .navbar #hamburger.is-active:hover .bars {
-  transform: rotate(90deg);
-  transition: transform 0.2s ease-in;
-}
-#hero .navbar #hamburger.is-active .navbar__logo--title p {
+#hero .navbar #hamburger.is-active .navbar__logo--title {
   color: #fff;
 }
 #hero .navbar #hamburger.is-active .menu {
@@ -214,9 +208,8 @@ a {
   z-index: 999;
 }
 #hero .navbar .hamburger .menu {
-  font-size: 15px;
-  font-weight: bold;
-  letter-spacing: 2px;
+  font-size: 1.6rem;
+  margin-right: 0.5rem;
   text-transform: uppercase;
 }
 #hero .navbar .hamburger .bars {
@@ -288,7 +281,7 @@ a {
   font-weight: bold;
 }
 #hero .navbar .menu__bar li a:hover {
-  color: white;
+  color: #fff;
 }
 
 .hero__container--btn {
@@ -561,41 +554,25 @@ a {
   object-fit: cover;
 }
 
-#selectedProjects .selectedProjects__heading {
-  padding: 4.5rem;
-}
 @media (min-width: 320px) and (max-width: 478px) {
   #selectedProjects .selectedProjects__heading {
     padding: 2rem;
   }
 }
-@media (min-width: 320px) and (max-width: 478px) {
+@media (min-width: 479px) and (max-width: 768px) {
   #selectedProjects .selectedProjects__heading {
     padding: 2.5rem;
   }
 }
-@media (min-width: 769px) and (max-width: 1024px) {
-  #selectedProjects .selectedProjects__heading {
-    padding: 3.5rem;
-  }
-}
-@media (min-width: 1025px) and (max-width: 1250px) {
-  #selectedProjects .selectedProjects__heading {
-    padding: 4rem;
-  }
-}
 #selectedProjects .selectedProjects__heading h3 {
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-}
-#selectedProjects .selectedProjects__heading h2 {
-  font-family: "Poppins", sans-serif;
+  color: #878a8f;
 }
 #selectedProjects .selectedProjects__container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 2rem;
-  padding: 5rem;
+  padding: 5rem 0;
 }
 @media (min-width: 320px) and (max-width: 478px) {
   #selectedProjects .selectedProjects__container {
@@ -623,13 +600,14 @@ a {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  transition: 0.3s ease-out;
+  transition: all 0.1s ease;
 }
 #selectedProjects .selectedProjects__container .box1:hover {
   cursor: pointer;
   background: url(/loader-basicux.c74e4089.jpg);
-  background-position: center center;
   background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-repeat: no-repeat;
 }
 #selectedProjects .selectedProjects__container .box1:hover .hover__button {
@@ -653,10 +631,10 @@ a {
   margin-left: 10px;
 }
 #selectedProjects .selectedProjects__container .box2 {
-  transition: all 0.3s ease-out;
+  transition: all 0.1s ease;
   background-image: url(/triniso-01.0b9373ce.jpg);
   background-size: cover;
-  background-position: center right;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 #selectedProjects .selectedProjects__container .box2 .hover__button {
@@ -678,7 +656,7 @@ a {
 #selectedProjects .selectedProjects__container .box2:hover {
   cursor: pointer;
   background: url(/loader-triniso.c152d023.jpg);
-  background-position: center right;
+  background-position: center center;
   background-size: cover;
 }
 #selectedProjects .selectedProjects__container .box2:hover .hover__button {
@@ -686,7 +664,7 @@ a {
   opacity: 1;
 }
 #selectedProjects .selectedProjects__container .box3 {
-  transition: all 0.3s ease-out;
+  transition: all 0.1s ease;
   background-image: url(/symova-01.1e01dca7.jpg);
   background-size: cover;
   background-position: center center;
@@ -713,7 +691,8 @@ a {
   cursor: pointer;
   background: url(/loader-symova.bd3aa24c.jpg);
   background-size: cover;
-  background-position: center left;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 #selectedProjects .selectedProjects__container .box3:hover .hover__button {
   visibility: visible;
@@ -723,7 +702,7 @@ a {
   background: url(/pmr-01.9ba2de74.jpg);
   background-position: center center;
   background-size: cover;
-  transition: all 0.3s ease-out;
+  transition: all 0.1s ease-out;
 }
 #selectedProjects .selectedProjects__container .box4 .hover__button {
   color: #fff;
@@ -745,18 +724,25 @@ a {
   cursor: pointer;
   background: url(/loader-pmr.7b7fec56.jpg);
   background-size: cover;
-  background-position: bottom center;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 #selectedProjects .selectedProjects__container .box4:hover .hover__button {
   visibility: visible;
   opacity: 1;
 }
-#selectedProjects .box1, #selectedProjects .box2, #selectedProjects .box3, #selectedProjects .box4 {
+#selectedProjects .box1,
+#selectedProjects .box2,
+#selectedProjects .box3,
+#selectedProjects .box4 {
   height: 60rem;
   grid-column: span 6;
 }
 @media (min-width: 320px) and (max-width: 478px) {
-  #selectedProjects .box1, #selectedProjects .box2, #selectedProjects .box3, #selectedProjects .box4 {
+  #selectedProjects .box1,
+#selectedProjects .box2,
+#selectedProjects .box3,
+#selectedProjects .box4 {
     height: 40rem;
     grid-column: 1/13;
   }
@@ -792,9 +778,6 @@ a {
   }
 }
 
-#personalProjects {
-  padding: 4.5rem;
-}
 @media (min-width: 320px) and (max-width: 478px) {
   #personalProjects {
     padding: 2rem;
@@ -806,7 +789,7 @@ a {
   }
 }
 #personalProjects .personalProjects__heading {
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 #personalProjects .personalProjects__heading p:nth-child(1) {
   text-transform: uppercase;
@@ -823,7 +806,7 @@ a {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 2rem;
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 #personalProjects .container .box1 {
   position: relative;
@@ -831,7 +814,7 @@ a {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  transition: all 0.3s ease-out;
+  transition: all 0.1s ease;
 }
 #personalProjects .container .box1 .hover__button {
   color: #fff;
@@ -849,26 +832,26 @@ a {
   text-align: center;
   margin-left: 10px;
 }
-#personalProjects .container:hover {
+#personalProjects .container .box1:hover {
   cursor: pointer;
-  background: url(/triniso-01.0b9373ce.jpg) center center rgba(1, 8, 31, 0.8);
+  background: url(/triniso-01.0b9373ce.jpg) center center;
   background-size: cover;
-  background-blend-mode: multiply;
 }
-#personalProjects .container:hover .hover__button {
+#personalProjects .container .box1:hover .hover__button {
   visibility: visible;
   opacity: 1;
 }
 @media (min-width: 320px) and (max-width: 478px) {
-  #personalProjects .container:hover .hover__button {
+  #personalProjects .container .box1:hover .hover__button {
     display: none;
   }
 }
 #personalProjects .box2 {
-  transition: all 0.3s ease-out;
+  transition: all 0.1s ease;
   background: url(/symova-01.1e01dca7.jpg);
   background-size: cover;
-  background-position: center left;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 #personalProjects .box2 .box2__text .hover__button {
   color: #fff;
@@ -889,8 +872,9 @@ a {
 #personalProjects .box2:hover {
   cursor: pointer;
   background: url(/symova-01.1e01dca7.jpg);
-  background-position: center left;
+  background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 #personalProjects .box2:hover .hover__button {
   visibility: visible;
@@ -902,29 +886,35 @@ a {
   }
 }
 
-.box1, .box2 {
+.box1,
+.box2 {
   height: 60rem;
   grid-column: span 6;
 }
 @media (min-width: 320px) and (max-width: 478px) {
-  .box1, .box2 {
+  .box1,
+.box2 {
     height: 40rem;
     grid-column: 1/13;
   }
 }
 
-.box1__text, .box2__text {
+.box1__text,
+.box2__text {
   padding: 4rem;
 }
 @media (min-width: 320px) and (max-width: 478px) {
-  .box1__text, .box2__text {
+  .box1__text,
+.box2__text {
     padding: 2rem;
   }
 }
-.box1__text p:nth-child(1), .box2__text p:nth-child(1) {
+.box1__text p:nth-child(1),
+.box2__text p:nth-child(1) {
   color: #928a8a;
 }
-.box1__text p:nth-child(2), .box2__text p:nth-child(2) {
+.box1__text p:nth-child(2),
+.box2__text p:nth-child(2) {
   color: white;
   font-size: 35px;
   font-weight: bold;
@@ -932,8 +922,7 @@ a {
 }
 
 #newProjects {
-  padding: 5rem;
-  padding: 4.5rem;
+  padding: 4rem 0;
 }
 @media (min-width: 320px) and (max-width: 478px) {
   #newProjects {
@@ -960,12 +949,17 @@ a {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 2rem;
+  padding: 4rem 0;
 }
-#newProjects .container .box1, #newProjects .container .box2, #newProjects .container .box3 {
+#newProjects .container .box1,
+#newProjects .container .box2,
+#newProjects .container .box3 {
   height: 35rem;
 }
 @media (min-width: 320px) and (max-width: 478px) {
-  #newProjects .container .box1, #newProjects .container .box2, #newProjects .container .box3 {
+  #newProjects .container .box1,
+#newProjects .container .box2,
+#newProjects .container .box3 {
     height: 25rem;
   }
 }
@@ -984,15 +978,16 @@ a {
   }
 }
 #newProjects .container .box1 .box1__text {
-  padding: 0px 100px;
+  padding: 0px 4rem;
   color: #fff;
-  font-size: 18px;
   text-align: center;
   visibility: hidden;
-  display: none;
+}
+#newProjects .container .box1 .box1__text p {
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 #newProjects .container .box1 .box1__text img {
-  font-size: 30px;
   margin-bottom: 26px;
 }
 @media (min-width: 479px) and (max-width: 768px) {
@@ -1024,14 +1019,17 @@ a {
     grid-column: span 6;
   }
 }
+#newProjects .container .box2 p {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
 #newProjects .container .box2 .box2__text {
-  padding: 0px 10rem;
+  padding: 0px 3rem;
   color: #fff;
   text-align: center;
   visibility: hidden;
 }
 #newProjects .container .box2 .box2__text img {
-  font-size: 30px;
   margin-bottom: 26px;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -1070,26 +1068,20 @@ a {
   }
 }
 #newProjects .container .box3 .box3__text {
-  padding: 0px 100px;
+  padding: 0px 3rem;
   color: #fff;
   text-align: center;
   visibility: hidden;
 }
 #newProjects .container .box3 .box3__text img {
-  font-size: 30px;
   margin-bottom: 26px;
 }
-@media (min-width: 769px) and (max-width: 1024px) {
-  #newProjects .container .box3 .box3__text {
-    display: none;
-  }
-}
 @media (min-width: 320px) and (max-width: 478px) {
   #newProjects .container .box3 .box3__text {
     display: none;
   }
 }
-@media (min-width: 320px) and (max-width: 478px) {
+@media (min-width: 479px) and (max-width: 768px) {
   #newProjects .container .box3 .box3__text {
     display: none;
   }
@@ -1150,7 +1142,7 @@ a {
 
 #contact {
   position: relative;
-  padding: 5rem;
+  padding: 4rem 0;
 }
 @media (min-width: 320px) and (max-width: 478px) {
   #contact {
@@ -1164,7 +1156,7 @@ a {
 }
 #contact .contact_content {
   position: relative;
-  padding: 5rem 0;
+  padding: 3rem 0;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 2rem;

@@ -2,16 +2,16 @@
 
 #contact {
   position: relative;
-  padding: 5rem;
-  @include media(sm){
+  padding: 4rem 0;
+  @include media(sm) {
     padding: 2rem;
   }
-  @include media(md){
+  @include media(md) {
     padding: 2.5rem;
   }
   .contact_content {
     position: relative;
-    padding: 5rem 0;
+    padding: 3rem 0;
     @include grid;
     > a {
       color: black;
@@ -74,7 +74,7 @@
         font-family: $primaryFont;
       }
       p:nth-child(2) {
-        margin-top: .5rem;
+        margin-top: 0.5rem;
         color: $pickupColor;
       }
     }

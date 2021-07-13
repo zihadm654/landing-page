@@ -18,16 +18,15 @@
     &__logo {
       z-index: 1000;
       @include flex(center);
-      img{
+      img {
         height: 4.2rem;
         width: 4.2rem;
       }
       &--title {
         margin-left: 1rem;
         p {
-          font-weight: 700;
-          font-size: 1.6rem;
-          letter-spacing: 1.5px;
+          font-weight: 600;
+          letter-spacing: 1px;
         }
       }
       &:hover {
@@ -37,8 +36,8 @@
     }
     #hamburger {
       &.is-active {
-        .navbar__logo--title{
-          color:#fff;
+        .navbar__logo--title {
+          color: #fff;
         }
         .menu {
           color: #fff;
@@ -60,8 +59,8 @@
       @include flex(space-between);
       z-index: 999;
       .menu {
-        font-weight: bold;
-        letter-spacing: 2px;
+        font-size: $sm;
+        margin-right: 0.5rem;
         text-transform: uppercase;
       }
       .bars {
@@ -82,8 +81,10 @@
     }
     .menu__bar {
       display: none;
-      .navbar__logo--title{
-        p{color: #fff;}
+      .navbar__logo--title {
+        p {
+          color: #fff;
+        }
       }
       .navbar__menu {
         padding: 6rem 0;
