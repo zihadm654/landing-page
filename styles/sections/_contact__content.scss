@@ -1,0 +1,128 @@
+hr{
+  margin: 0 7rem;
+  opacity: .6;
+  background-color: $pickupColor;
+}
+#contact {
+  position: relative;
+  padding: 4rem 7rem;
+  @include media(sm) {
+    padding: 2rem;
+  }
+  @include media(md) {
+    padding: 2.5rem;
+  }
+  .contact_content {
+    position: relative;
+    padding: 3rem 0;
+    @include grid;
+    > a {
+      color: black;
+    }
+    .contact_info {
+      grid-column: 1/6;
+      @include media(sm) {
+        grid-column: 1/13;
+      }
+      p:nth-child(1) {
+        i {
+          font-size: 100px;
+        }
+        font-family: $primaryFont;
+        font-weight: 700;
+      }
+      p:nth-child(2) {
+        margin-top: 0.62rem;
+        font-family: sans-serif;
+        color: $pickupColor;
+      }
+      p:nth-child(3) {
+        margin-top: 1.2rem;
+        font-family: $secondaryFont;
+        color: rgb(87, 84, 84);
+      }
+    }
+    .latest_work {
+      @include media(sm) {
+        grid-column: 1/13;
+      }
+      grid-column: 6/8;
+      p:nth-child(1) {
+        font-weight: 700;
+        font-family: $primaryFont;
+      }
+      p:nth-child(2) {
+        margin-top: 0.5rem;
+        width: 5rem;
+        font-family: $secondaryFont;
+        font-weight: 500;
+        font-size: 1rem;
+
+        a {
+          color: $secondaryColor;
+        }
+      }
+    }
+    .availability {
+      grid-column: 8/11;
+      @include media(sm) {
+        grid-column: 1/13;
+      }
+      p:nth-child(1) {
+        font-weight: 700;
+        font-family: $primaryFont;
+      }
+      p:nth-child(2) {
+        margin-top: 0.5rem;
+        color: $pickupColor;
+      }
+    }
+    .to_follow {
+      @include media(sm) {
+        grid-column: 1/13;
+      }
+      grid-column: 11/13;
+      p:nth-child(1) {
+        font-weight: 700;
+        font-family: $primaryFont;
+        width: 130px;
+      }
+      p:nth-child(2) {
+        margin-top: 0.62rem;
+        width: 6rem;
+        font-family: sans-serif;
+        font-weight: 500;
+        line-height: 25px;
+        > a {
+          color: $secondaryColor;
+          i {
+            color: $secondaryColor;
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    @include grid;
+    opacity: 60%;
+    .contain {
+      @include flex(center);
+      grid-column: 1/13;
+      img {
+        height: 45px;
+        width: 45px;
+        @include media(lg) {
+          height: 35px;
+          width: 35px;
+        }
+      }
+      p {
+        margin: 7px 0 0 10px;
+        font-size: 17px;
+        @include media(lg) {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

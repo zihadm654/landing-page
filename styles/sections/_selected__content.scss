@@ -1,0 +1,89 @@
+#selectedProjects {
+  .selectedProjects__heading {
+    @include media(sm) {
+      padding: 2rem;
+    }
+    @include media(md) {
+      padding: 2.5rem;
+    }
+    padding: 3rem 7rem;
+    h3 {
+      text-transform: uppercase;
+      color: $secondMost;
+      font-weight: 400;
+    }
+  }
+  .selectedProjects__container {
+    @include grid;
+    padding: 5rem 7rem;
+    @include media(sm) {
+      padding: 2rem;
+    }
+    @include media(md) {
+      padding: 2.5rem;
+    }
+    .box {
+      @include media(sm){
+        grid-column: 1/13;
+        height: 50rem;
+      }
+      height: 65rem;
+      position: relative;
+      background-image: url(../assets/basicux-01.jpg);
+      @extend %bg-image;
+      grid-column: span 6;
+      transition: background-image 100ms ease-out;
+      &:hover {
+        cursor: pointer;
+        background-image: url(../assets/loader-basicux.jpg);
+        .hover__button {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+      .hover__button {
+        color: #fff;
+        visibility: hidden;
+        margin-top: 15px;
+        font-size: 17px;
+        font-weight: 500;
+        opacity: 0;
+        @include flex(left);
+        transition: opacity 500ms ease-out;
+        #arrow__icon {
+          text-align: center;
+          margin-left: 10px;
+        }
+      }
+    }
+    .box2 {
+      background-image: url(../assets/triniso-01.jpg);
+      &:hover {
+        background: url(../assets/loader-triniso.jpg);
+      }
+    }
+    .box3 {
+      background-image: url(../assets/symova-01.jpg);
+      &:hover {
+        background: url(../assets/loader-symova.jpg);
+      }
+    }
+    .box4 {
+      background: url(../assets/pmr-01.jpg);
+      &:hover {
+        background: url(../assets/loader-pmr.jpg);
+      }
+    }
+  }
+  .box__text {
+    padding: 5rem;
+    color: white;
+    @include media(sm) {
+      padding: 3.5rem;
+    }
+    & p:nth-child(2) {
+      font-size: $md;
+      padding-top: 2.5rem;
+    }
+  }
+}

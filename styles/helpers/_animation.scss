@@ -1,0 +1,21 @@
+
+
+@keyframes content {
+    0% {transform: translateY(100px);
+        opacity: .1;    
+    }
+    100% {transform: translateY(0px);}
+  }
+  @keyframes box__content {
+    0% {transform: translateY(30px);
+        opacity: 0;    
+    }
+    10% {
+      opacity: 10%;
+    }
+    50% {
+      opacity: 40%;
+    }
+    100% {transform: translateY(0px);
+          opacity: 1;}
+  }

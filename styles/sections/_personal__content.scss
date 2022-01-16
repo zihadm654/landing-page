@@ -1,0 +1,193 @@
+#personalProjects {
+  .personalProjects__heading {
+    @include media(sm) {
+      padding: 2rem;
+    }
+    @include media(md) {
+      padding: 2.5rem;
+    }
+    padding: 4rem 7rem;
+    p {
+      text-transform: uppercase;
+      color: $pickupColor;
+      letter-spacing: 4px;
+    }
+    h3 {
+      padding: 1rem 0;
+      font-size: $sbtl;
+      font-weight: 700;
+    }
+  }
+  .container {
+    @include media(sm){
+      padding: 2rem;
+    }
+    @include media(md){
+      padding: 3rem;
+    }
+    @include grid();
+    padding: 2rem 7rem;
+    .card{
+      height: 60rem;
+      grid-column: span 6;
+      @include media(sm) {
+        height: 50rem;
+        grid-column: 1/13;
+      }
+      position: relative;
+      background-image: url(../assets/triniso-01.jpg);
+      @extend %bg-image;
+      transition: background-image 100ms ease-out;
+      &__text{
+        padding: 4rem;
+        @include media(sm) {
+          padding: 2rem;
+        }
+        & p:nth-child(1) {
+          color: rgb(146, 138, 138);
+        }
+        & p:nth-child(2) {
+          color: rgb(255, 255, 255);
+          font-size: 35px;
+          font-weight: bold;
+          padding-top: 15px;
+        }
+      }
+      .hover__button {
+        color: #fff;
+        visibility: hidden;
+        margin-top: 1.5rem;
+        font-size: $sm;
+        font-weight: 500;
+        opacity: 0;
+        @include flex(left);
+        transition: opacity 500ms ease-in;
+        #arrow__icon {
+          text-align: center;
+          margin-left: 10px;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        background: url(../assets/loader-triniso.jpg);
+        .hover__button {
+          visibility: visible;
+          opacity: 1;
+          @include media(sm) {
+            display: none;
+          }
+        }
+      }
+    }
+    .card2 {
+      background-image: url(../assets/symova-01.jpg);
+      &:hover {
+        background-image: url(../assets/loader-symova.jpg);
+      }
+    }
+  }
+}
+#newProjects {
+  @include media(sm) {
+    padding: 2rem;
+  }
+  @include media(md) {
+    padding: 2.5rem;
+  }
+  padding: 4rem 7rem;
+  .newProjects__heading {
+    & p:nth-child(1) {
+      text-transform: uppercase;
+      font-family: $primaryFont;
+      color: $pickupColor;
+      letter-spacing: 5px;
+    }
+    & p:nth-child(2) {
+      font-size: $sbtl;
+      font-family: $primaryFont;
+      font-weight: 700;
+    }
+  }
+  .container {
+    @include grid;
+    padding: 4rem 0;
+    .box {
+      @include media(sm) {
+        height: 30rem;
+        grid-column: span 6;
+      }
+      grid-column: span 4;
+      height: 40rem;
+      &__text {
+      @include flex(center);
+      flex-direction: column;
+      padding: 7rem 3rem;
+      color: #fff;
+      text-align: center;
+      visibility: hidden;
+      transition: visibility 100ms ease-out;
+      img {
+        margin-bottom: 26px;
+      }
+      p {
+          font-size: $sm;
+          font-weight: 400;
+      }
+    }
+      &:hover {
+        cursor: pointer;
+        .box__text {
+          visibility: visible;
+        }
+      }
+    }
+    .box1 {
+      background-image: url(../assets/68967415_391720778205108_6365166460657770162_n.jpg);
+    }
+    .box2 {
+      background: url(../assets/78706227_626690924538002_7907898064255941123_n.jpg);
+    }
+    .box3 {
+      background-image: url(../assets/78706227_626690924538002_7907898064255941123_n.jpg);
+    }
+  }
+  .collaborate {
+    padding: 8rem 5rem;
+    @include media(sm) {
+      padding: 4rem 0rem;
+    }
+    .content {
+      @include flex(center);
+      flex-direction: column;
+      text-align: center;
+      & p:nth-child(1) {
+        font-family: $primaryFont;
+        color: $pickupColor;
+        letter-spacing: 4px;
+      }
+      h4 {
+        margin-top: 1rem;
+        position: relative;
+        font-size: $sbtl;
+        font-weight: 700;
+        font-family: $primaryFont;
+        &:hover {
+          cursor: pointer;
+          position: relative;
+          &::after {
+            @include media(sm) {
+              display: none;
+            }
+            content: '';
+            position: absolute;
+            bottom: -.8rem;
+            left: 0px;
+            height: 0.5rem;
+            width: 100%;
+            background-color: $primaryColor;
+          }
+        }
+      }
+    }
+  }
+}

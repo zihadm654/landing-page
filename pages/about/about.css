@@ -1,0 +1,103 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+#about {
+  height: 300vh;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.about_container {
+  margin: 180px 100px 20px 100px;
+}
+
+p:nth-child(1) {
+  font-size: 15px;
+  color: gray;
+  letter-spacing: 6px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+p:nth-child(2) {
+  font-size: 42px;
+  /* margin: 20px; */
+  font-weight: bold;
+  text-align: center;
+  /* margin-top: 30px; */
+  margin: 20px 20px;
+}
+
+p:nth-child(3) {
+  font-size: 21px;
+  font-weight: 400;
+  color: gray;
+  /* font-weight: 500; */
+  text-align: center;
+  margin: 10px 100px;
+  /* width: 400px; */
+  opacity: 90%;
+}
+
+.about_box {
+  margin-top: 120px;
+  /* margin: 0px 40px; */
+}
+
+.box_silder {
+  height: 500px;
+  background-color: red;
+}
+
+.about_details {
+  margin: 80px;
+  margin-bottom: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.about_details .about_services {
+  padding: 50px;
+}
+
+.about_details .about_services p:nth-child(1) {
+  font-size: 14px;
+}
+
+.about_details .about_services p:nth-child(2) {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.about_details .about_tools {
+  padding: 50px;
+}
+
+.about_details .about_tools p:nth-child(2) {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.about_details .about_tools p:nth-child(1) {
+  font-size: 14px;
+}
+
+.border {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+  margin: 0px 80px 10px 80px;
+}
+/*# sourceMappingURL=about.css.map */

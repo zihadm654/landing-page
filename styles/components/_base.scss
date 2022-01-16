@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: $primaryFont;
+  font-size: 62.5%;
+  @include media(sm) {
+    font-size: 44%;
+  }
+  @include media(md) {
+    font-size: 56.25%;
+  }
+  @include media(lg) {
+    font-size: 64.5%;
+  }
+}
+body {
+  box-sizing: border-box;
+  background: #ffffff;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+.hero,
+#selectedProjects,
+#personalProjects,
+#newProjects,
+#contact {
+  @include media(xlg) {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

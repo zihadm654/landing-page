@@ -1,0 +1,50 @@
+.hero {
+  @include media(sm){
+    padding: 3rem 2rem;
+  }
+  @include media(md){
+    padding: 4rem 3.5rem;
+  }
+  padding: 4rem 7rem;
+  margin-top: 10rem;
+  position: relative;
+  @include grid();
+  &__left {
+    @include media(sm) {
+      grid-column: 1/13;
+    }
+    grid-column: 1/8;
+    h5 {
+      color: $secondMost;
+      text-transform: uppercase;
+      font-family: $primaryFont;
+      letter-spacing: .7rem;
+      font-size: $p;
+      font-weight: 600;
+    }
+    h1{
+      padding: 1rem 0;
+    }
+    p {
+      padding: 1rem 0;
+      font-family: $primaryFont;
+      color: $secondMost;
+    }
+  }
+  &__right {
+    @include media(sm) {
+      grid-column: 1/13;
+    }
+    grid-column: 8/13;
+    align-self: center;
+    .image__container {
+      height: auto;
+      width: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

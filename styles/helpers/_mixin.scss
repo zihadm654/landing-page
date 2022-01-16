@@ -1,0 +1,50 @@
+@mixin media($size) {
+  @if $size == sm {
+    @media (min-width: 320px) and (max-width: 478px) {
+      @content;
+    }
+  } @else if $size == md {
+    @media (min-width: 479px) and (max-width: 768px) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media (min-width: 769px) and (max-width: 1024px) {
+      @content;
+    }
+  } @else if $size == xlg {
+    @media (min-width: 1025px) and (max-width: 1440px) {
+      @content;
+    }
+  } @else if $size == xxlg {
+    @media (min-width: 1441px) and (max-width: 1800px) {
+      @content;
+    }
+  }
+}
+@mixin flex($justify) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+}
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+}
+%bg-image {
+  width: 100%;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+%btn {
+padding: 1rem;
+color:#fff;
+cursor: pointer;
+border: none;
+box-shadow: none;
+font-size: $sm;
+margin: 5px 0;
+text-align: center;
+display: block;
+}
